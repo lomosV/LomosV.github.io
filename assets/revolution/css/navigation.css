@@ -2079,8 +2079,8 @@ website:    http://www.themepunch.com
         }
 
         #background-video {
-            width: 100%;
-            height: 100%;
+            /* width: 100%;
+            height: 100%; */
             object-fit: cover;
         }
         /* Mobile Styles */
@@ -2184,7 +2184,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .responsive-video {
@@ -2214,6 +2214,11 @@ body {
 @media (max-width: 576px) {
   .responsive-video {
     width: 80%;
+  }
+}
+@media (max-width: 767px) {
+  .aboutus-video {
+      display: none;
   }
 }
 
@@ -2469,6 +2474,20 @@ background: transparent 50%;
     .slider .next {
       right: 10px;
     }
+    .video-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%; /* Adjust this value as needed */
+  }
+  
+  .centered-video {
+      max-width: 100%; /* Ensures the video doesn't overflow the container */
+      height: auto; /* Maintains the aspect ratio */
+      /* margin:50%; */
+      /* margin-left: 30%; */
+  }
+  
 /*-----------------------------------------------------------------------------
 
 - Revolution Slider 5.0 Navigatin Skin Style  -

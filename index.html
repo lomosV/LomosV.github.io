@@ -22,19 +22,29 @@
         <link rel="stylesheet" href="css/shortcode/shortcodes.css">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="css/responsive.css">
-		<link rel="stylesheet" type="text/css" href="css0/plugins.css" />
-		<link rel="stylesheet" type="text/css" href="css0/dark.css" />
-		<link rel="stylesheet" type="text/css" href="css0/colors.css" />
-		<link rel="stylesheet" type="text/css" href="css0/style.css" />
+
 		
 		<!-- Revolution Slider CSS -->
+		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 		<link href="assets/revolution/css/settings.css" rel="stylesheet">
 		<link href="assets/revolution/css/navigation.css" rel="stylesheet">
 		<link href="assets/revolution/custom-setting.css" rel="stylesheet">
 
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 		<style>
-			
+
+@media (max-width: 767px) {
+    #background-video {
+        padding-top: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #background-video iframe {
+        width: 100vw;
+        height: 100vh;
+    }
+}
 			</style>
 			
 			<script>
@@ -89,19 +99,19 @@
 							<!-- Logo Area Start -->
 							<div class="col-lg-4 col-md-12 col-sm-12">
 								<div class="logo-img">
-									<a href="index.html"><img src="img/logo1.png" alt="" height="30"></a>
+									<a href="index.html"><img src="img/logo1.png" ></a>
 								</div>
 							</div>
 							<!-- Logo Area End -->
 							<!-- Menu Area Start -->
 							<div class="col-lg-8 col-md-8 col-sm-12">
-								<div class="main-menu text-right">
+								<div class="main-menu text-right" >
 									<nav>
 										<ul>
-											<li class="active"><a href="index.html">Home</a></li>
+											<li class="active" ><a  href="index.html">Home</a></li>
 											<li><a href="#about">About</a></li>
 											<li><a href="services.html">Services</a></li>
-											<li><a href="portfolio-2-column.html">Portfolio</a></li>
+											<li><a href="portfolio.html">Portfolio</a></li>
 											<li><a href="contact-us.html">Contact</a></li>
 										</ul>
 									</nav>
@@ -116,17 +126,17 @@
 							<div class="row">
 								<div class="col-md-12 col-sm-12">
 									<div class="mobile-area">
-										<div class="mobile-menu">
+										<!-- <div class="mobile-menu"> -->
 											<nav id="mobile-nav">
 												<ul>
 													<li class="active"><a href="index.html">Home</a></li>
 													<li><a href="#about">About</a></li>
 													<li><a href="services.html">Services</a></li>
-													<li><a href="portfolio-2-column.html">Portfolio</a></li>
+													<li><a href="portfolio.html">Portfolio</a></li>
 													<li><a href="contact-us.html">Contact</a></li>
 												</ul>
 											</nav>
-										</div>
+										<!-- </div> -->
 									</div>
 								</div>
 							</div>
@@ -160,22 +170,26 @@
 			<div style=" background-color: black;">
 				<div class="page-content">
 					<!-- About Us Area Start -->
-					<section id="about" class="aboutus-area pt-90 pb-100">
+					<section id="about" class="aboutus-area pt-90 pb-100 text-center">
 						<div class="container">
 							<div class="row">
 								<div class="col-md-12">
 									<div class="aboutus-content text-center">
-										<div class="aboutus-title">
+										<div class="aboutus-title ">
 											<h2 style="font-size: 2.5em; color: #f5f5f5;">ABOUT US</h2>
-											<div class="aboutus-video bg-1 bg-overlay-1">
-												<div class="video-content">
-													<!-- <a href=""> -->
-														<video src="video/flayer.mp4" autoplay muted loop width="1050px"></video>
-														<!-- <i class="icofont icofont-play-alt-2"></i> -->
-													<!-- </a> -->
+											<div class="aboutus-video bg-1 ">
+												<div class="video-content" id="background-video" >
+													<video  src="video/flayer.mp4" autoplay muted loop class="popup-youtube"></video>
+												<!-- <i class="icofont icofont-play-alt-2"></i> -->
 												</div>
 											</div>
-											<p class="hover-text" style="color: #f5f5f5; font-style: oblique;">
+										</div>
+												<!-- <div class="video-content text-center">
+													<video src="video/flayer.mp4" autoplay muted loop></video>
+												</div> -->
+											<!-- </div> -->
+											<p class="hover-text text-center" style="color: #f5f5f5; font-style: oblique;">
+												
 												Bienvenue chez LOMOS VISION. Nous sommes une société de production ayant 5 ans d'expérience dans la production Audiovisuel, nous sommes vos interlocuteurs pour une production vidéo exceptionnelle. Qu'il s'agisse de publicités, de music vidéo, de films ou de tout ce qui se trouve entre les deux, nous possédons l'expertise nécessaire pour donner vie à votre vision. Notre équipe est passionnée par la narration et la création de visuels époustouflants. Faisons de vos idées une réalité !
 											</p>
 										</div>
@@ -187,7 +201,7 @@
 										<div class="aboutus-bottom-txt">
 											<div class="person-area">
 												<div class="person-img">
-													<img width="100px" height="100px" src="img/team/MOUAD RAHLI.jpg" alt="Person Image">
+													<img width="100px" height="100px" src="img/team/mouad.jpg" alt="Person Image">
 												</div>
 												<div class="person-txt">
 													<h6 style="font-size: 1.1em; color: #f5f5f5;">Mouad Rahli</h6>
@@ -201,7 +215,7 @@
 						</div>
 					</section>
 					<section class="gallery-area pt-95 pb-100">
-						<div class="container">
+						<div class="r">
 							<div class="row">
 								<!-- Section Titel -->
 								<div class="col-md-12">
@@ -213,7 +227,7 @@
 								<!-- Section Titel -->
 							</div>
 							<!-- Latest Shot Main Area Start -->
-							<div class="our-gallery">
+							<div class="our-gallery ">
 								<!-- Latest Shot/Portfolio Menu Tab -->
 								<div class="gallery">
 									<ul class="text-center gallery-menu">
@@ -224,7 +238,7 @@
 									</ul>
 								</div>
 								<!-- Latest Shot/Portfolio Menu Tab -->
-								<div class="grid gallery-box">
+								<div class=" gallery-box">
 									<div class="gallery-content">
 										<!-- Pre-Production -->
 										<div class="grid-item col-lg-4 col-md-6 col-sm-12 c1">
@@ -401,115 +415,129 @@
 							</div>
 							<!-- Latest Shot Main Area End -->
 							<!-- Load More Button -->
-							<div class="load-btn text-center mt-20">
-								<a class="hvr-btn" href="#">LOAD MORE</a>
-							</div>
-							<!-- Load More Button -->
 						</div>
 					</section>
 					
-					
+					<section class="feature-one">
+						<div class="feature-one__wrap">
+							<div class="feature-one__title-box">
+								<h2 class="feature-one__title">Lets make magic happen with LOMOS VISION
+								</h2>
+							</div>
+							<div class="feature-one__title-box">
+								<h2 class="feature-one__title">Lets make magic happen with LOMOS VISION
+								</h2>
+							</div>
+						</div>
+					</section>
 					<!-- Our Team Area Start -->
-					<section class="ourteam-area pt-95 pb-100">
-						<div class="container">
-							<div class="row">
-								<!-- Section Title -->
-								<div class="col-md-12">
-									<div class="section-title text-left two">
-										<h2 style="color: #f5f5f5;">OUR TEAM</h2>
-										<!-- <p>It is a long established fact that a reader will be distracted readable </p> -->
-									</div>
+					<div class="responsive-container-block outer-container">
+						<div class="responsive-container-block inner-container">
+						  <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-4 wk-ipadp-4 headings-container">
+							<p class="text-blk heading-text" style="color: #f5f5f5;">
+							  Meet our team
+							</p>
+							<p class="text-blk sub-heading-text">
+							</p>
+						  </div>
+						  <div class="responsive-cell-block wk-desk-8 wk-ipadp-8 wk-tab-12 wk-mobile-12 team-members-container">
+							<div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-mobile-12 wk-tab-12 card-container">
+								<div class="">
+								  <img class="card-img" src="img/team/FARID RAHLI.jpg">
+								  <p class="text-blk name">
+									Farid Rahli
+								  </p>
+								  <p class="text-blk position">
+									  Production Manager
+								  </p>
 								</div>
-								<!-- Section Title -->
-							</div>
-							<!-- Team Main Area Start -->
-							<div class="team-area-main" style="color: #f5f5f5;">
-								<div class="row">
-									<div class="col-md-12">
-										<div class="slider slider-for">
-											<div class="single-item">
-												<div class="large-img">
-													<img src="img/team/MOUAD RAHLI.jpg" alt="Mouad Rahli">
-												</div>
-												<div class="thumb-content text-right">
-													<div class="thumb-personal-info">
-														<div class="teamper-title">
-															<h5 style="color:#f5f5f5;">Mouad Rahli</h5>
-															<span style="color: #e2a750;">Producer</span>
-														</div>
-														<div class="team-social">
-															<ul>
-																<li><a href="#"><i class="icofont icofont-facebook"></i></a></li>
-																<li><a href="#"><i class="icofont icofont-linkedin"></i></a></li>
-																<li><a href="#"><i class="icofont icofont-twitter"></i></a></li>
-															</ul>
-														</div>
-														<!-- <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in randomised words which don't look even slightly believable.</p> -->
-													</div>
-												</div>
-											</div>
-											<div class="single-item">
-												<div class="large-img">
-													<img src="img/team/OMAR RAHLI .jpg" alt="Omar Rahli">
-												</div>
-												<div class="thumb-content text-right">
-													<div class="thumb-personal-info">
-														<div class="teamper-title">
-															<h5 style="color:#f5f5f5;">Omar Rahli</h5>
-															<span style="color: #e2a750;">Executive Producer</span>
-														</div>
-														<div class="team-social">
-															<ul>
-																<li><a href="#"><i class="icofont icofont-facebook"></i></a></li>
-																<li><a href="#"><i class="icofont icofont-linkedin"></i></a></li>
-																<li><a href="#"><i class="icofont icofont-twitter"></i></a></li>
-															</ul>
-														</div>
-														<!-- <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in randomised words which don't look even slightly believable.</p> -->
-													</div>
-												</div>
-											</div>
-											<div class="single-item">
-												<div class="large-img">
-													<img src="img/team/FARID RAHLI.jpg" alt="Farid Rahli">
-												</div>
-												<div class="thumb-content text-right">
-													<div class="thumb-personal-info">
-														<div class="teamper-title">
-															<h5 style="color:#f5f5f5;">Farid Rahli</h5>
-															<span style="color: #e2a750;">Production Manager</span>
-														</div>
-														<div class="team-social">
-															<ul>
-																<li><a href="#"><i class="icofont icofont-facebook"></i></a></li>
-																<li><a href="#"><i class="icofont icofont-linkedin"></i></a></li>
-																<li><a href="#"><i class="icofont icofont-twitter"></i></a></li>
-															</ul>
-														</div>
-														<!-- <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in randomised words which don't look even slightly believable.</p> -->
-													</div>
-												</div>
-											</div>
-										</div>
-										<!-- Service Thumb Area Start -->
-										<div class="slider slider-nav">
-											<div class="thumb-single">
-												<img style="border: none;" height="100px" width="100px"  src="img/team/MOUAD RAHLI.jpg" alt="Mouad Rahli">
-											</div>
-											<div class="thumb-single">
-												<img style="border: none;" height="100px" width="100px" src="img/team/OMAR RAHLI .jpg" alt="Omar Rahli">
-											</div>
-											<div class="thumb-single">
-												<img style="border: none;" height="100px" width="100px" src="img/team/FARID RAHLI.jpg" alt="Farid Rahli">
-											</div>
-										</div>
-										<!-- Service Thumb Area End -->
-									</div>
+							  </div>
+							  <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-mobile-12 wk-tab-12 card-container">
+								<div class="">
+								  <img class="card-img" src="img/team/OMAR RAHLI .jpg">
+								  <p class="text-blk name">
+									Omar Rahli
+								  </p>
+								  <p class="text-blk position">
+									  Executive Producer
+								  </p>
 								</div>
+							  </div>
+							<div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-mobile-12 wk-tab-12 card-container">
+							  <div class="">
+								<img class="card-img" src="img/team/mouad.jpg">
+								<!-- <img class="card-img" src="/img/team/mouad.jpg"> -->
+								<p class="text-blk name">
+								  Mouad Rahli
+								</p>
+								<p class="text-blk position">
+								  Producer
+								</p>
+							  </div>
 							</div>
-							<!-- Team Main Area End -->
+						  </div>
 						</div>
-					</section>
+					  </div>
+					<section id="contactus">
+  
+						<h1 class="section-header">Contact Us</h1>
+						
+						<div class="contact-wrapper">
+						
+						<!-- Left contact page --> 
+						  
+						  <form id="contact-form" class="form-horizontal" role="form">
+							 
+							<div class="form-group">
+							  <div class="col-sm-12">
+								<input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
+							  </div>
+							</div>
+					  
+							<div class="form-group">
+							  <div class="col-sm-12">
+								<input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
+								<textarea style="margin-top: 15px;" class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+								<button class="btn btn-primary send-button" style="background-color: black; border-color: #f5f5f5; max-width: 100%;" id="submit" type="submit" value="SEND">
+									<div class="alt-send-button" style="width: 100%;">
+									  <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+									</div>
+								  
+								  </button>
+							  </div>
+
+							</div>
+					  
+							
+							
+							
+						  </form>
+						  
+						<!-- Left contact page --> 
+						  
+							<div class="direct-contact-container">
+					  
+							 
+					  
+							  <hr>
+							  <ul class="social-media-list">
+								<li><a href="#" target="_blank" class="contact-icon">
+								  <i class="fa fa-vimeo" aria-hidden="true"></i></a>
+								</li>
+								<li><a href="#" target="_blank" class="contact-icon">
+								  <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+								</li>
+								<li><a href="#" target="_blank" class="contact-icon">
+								  <i class="fa fa-instagram" aria-hidden="true"></i></a>
+								</li>       
+							  </ul>
+							  <hr>
+							</div>
+						</div>
+						
+					  </section>  
+						
+						
 				<!-- Our Team Area End -->
 				<footer class="bg-5 bg-overlay-2">
         <!-- Footer Top Area Start -->
@@ -524,8 +552,8 @@
                                 <p>It is a long established fact that a good reader on will be distracted by the by readable content of a page when looking at its layout.</p>
                                 <div class="subcribe">
                                     <form id="mc-form">
-                                        <input autocomplete="off" placeholder="Your E-mail" type="text">
-                                        <button value="Submit" type="submit" class="search-button">SUBSCRIBE</button>
+                                        <!-- <input autocomplete="off" placeholder="Your E-mail" type="text">
+                                        <button value="Submit" type="submit" class="search-button">SUBSCRIBE</button> -->
                                         <!-- mailchimp-alerts Start -->
                                         <div class="mailchimp-alerts text-centre">
                                             <div class="mailchimp-submitting"></div>

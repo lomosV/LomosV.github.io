@@ -382,7 +382,7 @@ textarea:focus {
 .pb-80 { padding-bottom: 80px }
 .pb-90 { padding-bottom: 90px }
 .pb-95 { padding-bottom: 95px }
-.pb-100 { padding-bottom: 100px }
+.pb-100 { padding-bottom: 0px }
 .pb-110 { padding-bottom: 110px }
 .pb-120 { padding-bottom: 120px }
 .pb-130 { padding-bottom: 130px }
