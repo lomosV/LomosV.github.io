@@ -172,6 +172,11 @@
   width: 100%;
   z-index: 999999;
 }
+@media (max-width: 767px) {
+  .sticky {
+    position: relative;
+  }
+}
 .sticky .main-menu nav ul li a{padding: 25px 16px;}
 .sticky .logo-img {margin-top: 12px;}
 .header-style-2.sticky .logo-img {

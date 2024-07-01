@@ -3,12 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Home - Film Studio</title>
+        <title>Work - Lomos Vision</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="img/home-one/apple-touch-icon.png">
-		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+        <link rel="apple-touch-icon" href="img/icon 1.svg">
+		<link rel="shortcut icon" type="image/x-icon" href="img/icon 1.svg">
         <!-- Place favicon.ico in the root directory -->
 		
 		
@@ -32,7 +32,56 @@
 		<link href="assets/revolution/custom-setting.css" rel="stylesheet">
 
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <style>
+        .video-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+            .video-item {
+            position: relative;
+            width: 400px;
+            height: 500px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .video-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .video-preview {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 10;
+        }
+        .video-preview iframe {
+            width: 100%;
+            height: 100%;
+            object-fit:contain;
+        }
+        .video-title {
+            display: none;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            z-index: 20;
+        }
+    </style>
     </head>
+    
 	<body style="background-color: black;">
 
         <!--[if lt IE 8]>
@@ -43,28 +92,27 @@
 		<div class="page-wrapper" id="main-home">
 			<!-- Header Area Start -->
 			<header>
-               
 				<!-- Header Menu Area Start -->
 				<div class="header-menu mt-50" id="sticky-header">
 					<div class="container">
 						<div class="row">
 							<!-- Logo Area Start -->
 							<div class="col-lg-4 col-md-12 col-sm-12">
-								<div class="logo-img">
-									<a href="index.html"><img src="img/logo1.png" alt="" height="30"></a>
+								<div class="logo-img" >
+									<a href="index.html"><img src="img/logo1.png" style="margin-top:6px;"  ></a>
 								</div>
 							</div>
 							<!-- Logo Area End -->
 							<!-- Menu Area Start -->
 							<div class="col-lg-8 col-md-8 col-sm-12">
-								<div class="main-menu text-right">
+								<div class="main-menu text-right" >
 									<nav>
 										<ul>
-											<li class="active"><a href="index.html">Home</a></li>
-											<li><a href="#about">About</a></li>
-											<li><a href="services.html">Services</a></li>
-											<li><a href="portfolio-2-column.html">Portfolio</a></li>
-											<li><a href="contact-us.html">Contact</a></li>
+											<li ><a href="index.html">Home</a></li>
+													<li><a href="index.html#about">A PROPOS</a></li>
+													<li><a href="index.html#services">Services</a></li>
+													<li class="active" ><a href="portfolio.html">Work</a></li>
+													<li><a href="index.html#contactus">Contact</a></li>
 										</ul>
 									</nav>
 								</div>
@@ -81,11 +129,11 @@
 										<div class="mobile-menu">
 											<nav id="mobile-nav">
 												<ul>
-													<li class="active"><a href="index.html">Home</a></li>
-													<li><a href="#about">About</a></li>
-													<li><a href="services.html">Services</a></li>
-													<li><a href="portfolio-2-column.html">Portfolio</a></li>
-													<li><a href="contact-us.html">Contact</a></li>
+													<li ><a href="index.html">Home</a></li>
+													<li><a href="#about">A PROPOS</a></li>
+													<li><a href="#services">Services</a></li>
+													<li class="active"><a href="portfolio.html">Work</a></li>
+													<li><a href="#contactus">Contact</a></li>
 												</ul>
 											</nav>
 										</div>
@@ -112,91 +160,81 @@
                 </div>
             </div>
         </section>
+        
 			</header>
-
-        <div class="page-content">
-            <!-- Gallery Area Start -->
-            <section class="gallery-area pt-95 pb-70">
-                <div class="container">
-                    <div class="our-gallery">
-                        <!-- Latest Shot/Portfolio Menu Tab -->
-                        <!-- <div class="gallery">
-                            <ul class="text-center gallery-menu">
-                                <li class="active" data-filter="*">All</li>
-                                <li class="filter" data-filter=".c1">SHOOTING</li>
-                                <li class="filter" data-filter=".c2">PRODUCTION </li>
-                                <li class="filter" data-filter=".c3">STUDIO</li>
-                                <li class="filter" data-filter=".c4">LOCATION</li>
-                            </ul>
-                        </div> -->
-                        <!-- Latest Shot/Portfolio Menu Tab -->
-                        <div class="grid gallery-box">
-                            
-                               
-                            <div class="grid-item col-lg-4 col-md-6 col-sm-12 c1 c3 c5">
-                                <!-- Latest Shot/Portfolio Single -->
-                                <div class="portfolio">
-                                    <div class="portfolio-image">
-                                        <img src="img/port/LE FEU.jpg" alt="">
-                                    </div>
-                                    <div class="portfolio-content">
-                                        <a class="popup-vimeo" target="_blank" href="https://player.vimeo.com/video/909717256?h=2190d65ca6"><i class="icofont-play"></i></a>
-                                        <h5><a href="#">LE FEU</a></h5>
-                                        <!-- <h6><a href="portfolio.html">T-FLOW</a></h6> -->
-                                    </div>
-                                </div> 
-                                
-                                <!-- Latest Shot/Portfolio Single -->
-                            </div>
-                                <div class="grid-item col-lg-4 col-md-6 col-sm-12 c1 c3 c5">
-                                    <!-- Latest Shot/Portfolio Single -->
-                                    <div class="portfolio">
-                                        <div class="portfolio-image">
-                                            <img src="img/port/OSRAH.jpg" alt="">
-                                        </div>
-                                        <div class="portfolio-content">
-                                            <a class="popup-vimeo" target="_blank" href="https://player.vimeo.com/video/942155897?h=32118dd5b6"><i class="icofont-play"></i></a>
-                                            <h5><a href="#">OSRAH</a></h5>
-                                            <!-- <h6><a href="portfolio.html">OSRAH Group</a></h6> -->
-                                        </div>
-                                    </div> 
-                                    <!-- Latest Shot/Portfolio Single -->
+                <div class="video-gallery">
+                    <div class="video-item" data-vimeo-url="https://vimeo.com/909717256">
+                        <img src="img/port/LE FEU.jpg" alt="LE FEU">
+                        <div class="video-preview">
+                            <!-- <div style="padding:56.25% 0 0 0;position:relative;" id="background-video"> -->
+                                <iframe 
+                                    src="https://player.vimeo.com/video/909717256?h=2190d65ca6&autoplay=1&loop=1&background=1" 
+                                    style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                                    frameborder="0" 
+                                    allow="autoplay; fullscreen; picture-in-picture" 
+                                    allowfullscreen >
+                                </iframe>
+                                <div class="portfolio" style="background: none;">
+                                    <h5><a href="#" style="color: aliceblue; font-size: 50px;">le feu</a></h5>
+                                    <a class="popup-vimeo" href="https://vimeo.com/909717256"><i style=" color: aliceblue;" class="icofont-play"></i></a>
                                 </div>
-                                <div class="grid-item col-lg-4 col-md-6 col-sm-12 c1 c3 c5">
-                                    <!-- Latest Shot/Portfolio Single -->
-                                    <div class="portfolio">
-                                        <div class="portfolio-image">
-                                            <img src="img/port/PLATA O PLOMO .jpg" alt="">
-                                        </div>
-                                        <div class="portfolio-content">
-                                            <a class="popup-vimeo" target="_blank" href="https://player.vimeo.com/video/934623002?h=f48de17d67"><i class="icofont-play"></i></a>
-                                            <h5><a href="portfolio-details.html">PLATA O PLOMO</a></h5>
-                                            <!-- <h6><a href="portfolio.html">Advertising</a></h6> -->
-                                        </div>
-                                    </div> 
-                                    <!-- Latest Shot/Portfolio Single -->
-                                </div>
-                                <div class="grid-item col-lg-4 col-md-6 col-sm-12 c1 c3 c5">
-                                    <!-- Latest Shot/Portfolio Single -->
-                                    <div class="portfolio">
-                                        <div class="portfolio-image">
-                                            <img src="img/port/THE OWNERS.jpg" alt="">
-                                        </div>
-                                        <div class="portfolio-content">
-                                            <a class="popup-vimeo" target="_blank" href="https://vimeo.com/876955987"><i class="icofont-play"></i></a>
-                                            <h5><a href="portfolio-details.html">THE OWNERS</a></h5>
-                                            <h6><a href="portfolio.html">Advertising</a></h6>
-                                        </div>
-                                    </div> 
-                                    <!-- Latest Shot/Portfolio Single -->
-                                </div>
-                                
-                            </div>
+                            <!-- </div> -->
+                        </div>
+                    
+                    </div>
+                    <div class="video-item" data-vimeo-url="https://vimeo.com/942155897">
+                        <img src="img/port/OSRAH.jpg" alt="OSRAH">
+                        <div class="video-preview">
+                            <iframe 
+                            src="https://player.vimeo.com/video/942155897?h=32118dd5b66&autoplay=1&loop=1&background=1" 
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                            frameborder="0" 
+                            allow="autoplay; fullscreen; picture-in-picture" 
+                            allowfullscreen >
+                        </iframe>
+                        <div class="portfolio" style="background: none;">
+                            <h5><a href="#" style="color: aliceblue; font-size: 50px;">OSRAH</a></h5>
+                            <a class="" href="https://vimeo.com/909717256"><i style=" color: aliceblue;" class="icofont-play"></i></a>
+                        </div>
                         </div>
                     </div>
-                    <!-- Latest Shot Main Area End -->
+                    <div class="video-item" data-vimeo-url="https://vimeo.com/934623002">
+                        <img src="img/port/PLATA O PLOMO .jpg" alt="PLATA O PLOMO">
+                        <div class="video-preview">
+                            <iframe 
+                            src="https://player.vimeo.com/video/934623002?h=f48de17d67&autoplay=1&loop=1&background=1" 
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                            frameborder="0" 
+                            allow="autoplay; fullscreen; picture-in-picture" 
+                            allowfullscreen >
+                        </iframe>
+                        <div class="portfolio" style="background: none;">
+                            <h5><a  href="#" style="color: aliceblue; font-size: 50px;">plata o PLOMO</a></h5>
+                            <a class="popup-vimeo" href="https://vimeo.com/909717256"><i style=" color: aliceblue;" class="icofont-play"></i></a>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="video-item" data-vimeo-url="https://vimeo.com/876955987">
+                        <img src="img/port/THE OWNERS.jpg" alt="THE OWNERS">
+                        <div class="video-preview">
+                            <iframe 
+                            src="https://player.vimeo.com/video/876955987&autoplay=1&loop=1&background=1" 
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                            frameborder="0" 
+                            allow="autoplay; fullscreen; picture-in-picture" 
+                            allowfullscreen >
+                        </iframe>
+                        <div class="portfolio" style="background: none;">
+                            <h5><a  href="#" style="color: aliceblue; font-size: 50px;">the OWNERS</a></h5>
+                            <a class="popup-vimeo" href="https://vimeo.com/909717256"><i style=" color: aliceblue;" class="icofont-play"></i></a>
+                        </div>
+                        </div>
+                    </div>
                 </div>
-            </section>
+
+                    <!-- Latest Shot Main Area End -->
+                </section>
+            </div>
         <footer class="bg-5 bg-overlay-2">
             <!-- Footer Top Area Start -->
             <div class="footer-top ptb-90">
@@ -283,6 +321,26 @@
             <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
             <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
             <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-            <script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+            <script>
+                $(document).ready(function() {
+                    $('.video-item').hover(function() {
+                        $(this).find('.video-preview').fadeIn();
+                    }, function() {
+                        $(this).find('.video-preview').fadeOut();
+                    });
+            
+                    $('.video-item').click(function() {
+                        $.magnificPopup.open({
+                            items: {
+                                src: $(this).data('vimeo-url')
+                            },
+                            type: 'iframe'
+                        });
+                    });
+                });
+
+            </script>
         </body>
     </html>
