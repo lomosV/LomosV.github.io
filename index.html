@@ -45,6 +45,38 @@
         height: 100vh;
     }
 }
+.modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #170f0f;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 300px;
+            text-align: center;
+        }
+        .close {
+            color: #070505;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
 			</style>
 			
 			<script>
@@ -491,32 +523,25 @@
 						
 						<!-- Left contact page --> 
 						  
-						  <form id="contact-form" class="form-horizontal" role="form">
-							 
+						<form id="contact-form" class="form-horizontal" role="form">
 							<div class="form-group">
-							  <div class="col-sm-12">
-								<input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
-							  </div>
+								<div class="col-sm-12">
+									<input type="text" class="form-control" id="name" placeholder="NAME" name="name" required>
+								</div>
 							</div>
-					  
 							<div class="form-group">
-							  <div class="col-sm-12">
-								<input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
-								<textarea style="margin-top: 15px;" class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
-								<button class="btn btn-primary send-button" style="background-color: black; border-color: #f5f5f5; max-width: 100%;" id="submit" type="submit" value="SEND">
-									<div class="alt-send-button" style="width: 100%;">
-									  <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
-									</div>
-								  
-								  </button>
-							  </div>
-
+								<div class="col-sm-12">
+									<input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" required>
+									<textarea style="margin-top: 15px;" class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+									<button class="btn btn-primary send-button" style="background-color: black; border-color: #f5f5f5; max-width: 100%;" id="submit" type="submit" value="SEND">
+										<div class="alt-send-button" style="width: 100%;">
+											<i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+										</div>
+									</button>
+								</div>
 							</div>
-					  
-							
-							
-							
-						  </form>
+						</form>
+					
 						  
 						<!-- Left contact page --> 
 						  
@@ -606,6 +631,12 @@
                 </div>
             </div>
         </div>
+		<div id="myModal" class="modal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<p id="modal-message"></p>
+			</div>
+		</div>
         <!-- Footer Bottom Area End -->
     </footer>
 			</div>
@@ -630,5 +661,41 @@
 		<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
 		<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
 		<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function(){
+        emailjs.init("hwGMAWrkSqeatpiB-"); // Replace 'YOUR_PUBLIC_KEY' with your actual public key from EmailJS
+    })();
+
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        emailjs.sendForm("service_d1nuvhu","template_bwfivea", this)
+		.then(function(response) {
+                showModal('Message sent successfully, thank you we gonna contact soon as possible!');
+            }, function(error) {
+                showModal('Failed to send the message. Please try again later.');
+            });
+    });
+	function showModal(message) {
+        var modal = document.getElementById("myModal");
+        var span = document.getElementsByClassName("close")[0];
+        var modalMessage = document.getElementById("modal-message");
+
+        modalMessage.textContent = message;
+        modal.style.display = "block";
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    }
+
+</script>
     </body>
 </html>
